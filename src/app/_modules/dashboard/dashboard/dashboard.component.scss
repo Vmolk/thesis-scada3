@@ -1,0 +1,206 @@
+.header-text {
+  margin: 0 30px;
+}
+.mat-card {
+  color: rgba($color: #000000, $alpha: 0.5);
+}
+.card-header-container {
+  border-bottom: 1px solid gainsboro;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.material-tanks-container{
+  margin-left: 580px;
+  margin-right: auto;
+  height: 350px;
+}
+
+.mixing-tank-container{
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.tank-container{
+  border: none;
+  display: inline-block;
+  padding: 0px 130px;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 800px;
+}
+
+.tank {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.valve1 {
+  position: absolute;
+  width:70px;
+  height:100px;
+  top: 285px;
+  left: 1640px;
+  z-index: 2;
+}
+
+
+.pipe1 {
+  position: absolute;
+  width:100px;
+  height:150px;
+  top: 295px;
+  left: 1700px;
+  z-index: 1;
+}
+
+.valve2 {
+  position: absolute;
+  width:70px;
+  height:100px;
+  top: 615px;
+  left: 1125px;
+  z-index: 2;
+}
+
+.pipe2 {
+  position: absolute;
+  width:100px;
+  height:150px;
+  top: 625px;
+  left: 1030px;
+  z-index: 1;
+}
+
+.pipe4 {
+  position: absolute;
+  width: 50px;
+  height:50px;
+  top: 685px;
+  left: 980px;
+  z-index: 1;
+}
+
+.HighAlarmSetting {
+  display: flex;
+  width: 180px;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  top: 350px;
+  left: 1461px;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.LowAlarmSetting {
+  display: flex;
+  width: 180px;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  top: 680px;
+  left: 1461px;
+  z-index: 1;
+  font-weight: 700;
+}
+
+.FlowMeterDisplay {
+  position: absolute;
+  width: 200px;
+  height:50px;
+  top: 630px;
+  left: 1070px;
+  z-index: 1;
+}
+
+.fill-valve-adjust{
+  position: absolute;
+  width:70px;
+  height:100px;
+  top: 220px;
+  left: 1700px;
+}
+.discharge-valve-adjust{
+  position: absolute;
+  width:70px;
+  height:100px;
+  top: 720px;
+  left: 1100px;
+}
+
+.a {
+  position: absolute;
+  margin-top: 25px;
+}
+
+app-tank:hover {
+  cursor: pointer;
+}
+//img { position:absolute; top:1000px; left:20px; }
+
+
+.control-panel {
+  display: table;
+  border: 2px solid rgb(73, 73, 73);
+  border-radius: 10px;
+}
+
+.example-label {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: table-cell;
+  font-size: 25px;
+  margin-left: 8px;
+  min-width: 180px;
+  font-weight: 600;
+  color: black;
+}
+
+.example-button-row {
+  display: table-cell;
+  min-width: 150px;
+  padding-bottom: 20px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.example-form {
+  min-width: 300px;
+  max-width: 500px;
+  //width: 100%;
+}
+
+.example-full-width {
+  width: 60%;
+}
+
+td {
+  padding-right: 8px;
+}
+

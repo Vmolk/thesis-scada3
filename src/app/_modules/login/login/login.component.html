@@ -1,0 +1,124 @@
+<div class="schaeffler">
+  <button mat-button [matMenuTriggerFor]="language">
+    VI
+    <mat-icon aria-hidden="false" aria-label="Example home icon">
+      arrow_drop_down
+    </mat-icon>
+  </button>
+  <mat-menu #language="matMenu">
+    <button mat-menu-item (click)="switchLang('en')">English (EN)</button>
+    <button mat-menu-item (click)="switchLang('vi')">Tiếng Việt (VI)</button>
+  </mat-menu>
+  <!-- <img
+    src="assets/icons/1280px-Schaeffler_logo.png"
+    alt="logo"
+    class="logo"
+    width="250px"
+    height="auto"
+  /> -->
+</div>
+<div class="container-login">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+    <mat-card class="card-login">
+      <mat-card-content>
+        <img
+          src="assets/icons/EDashboard_logo.svg"
+          alt="EDashboard_logo"
+          class="e-dashboard"
+          width="175"
+          height="100"
+        />
+
+        <div class="login-container center-align">
+          <div>
+            <div class="full-width">
+              <div class="row-container">
+                <div class="left-text uppercase-text">
+                  <label for="username">
+                    Username
+                  </label>
+                </div>
+                <div class="right-text">
+                  <img
+                    src="assets/pages/LoginScreen/user-silhouette.svg"
+                    class="icon-size user-icon"
+                    alt="userIcon"
+                    matTooltip="Info about the action"
+                    width="30"
+                    height="30"
+                  />
+                  <input
+                    matInput
+                    id="username"
+                    formControlName="username"
+                    type="text"
+                    placeholder="Username"
+                    required
+                    maxlength="250"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="full-width">
+              <div class="row-container">
+                <div class="left-text uppercase-text">
+                  <label for="password">
+                    Password
+                  </label>
+                </div>
+                <div class="right-text">
+                  <img
+                    src="assets/pages/LoginScreen/lock.svg"
+                    alt="lockIcon"
+                    class="icon-size user-icon"
+                    width="22.5"
+                    height="30"
+                  />
+                  <input
+                    class="full-width"
+                    matInput
+                    type="password"
+                    id="password"
+                    formControlName="password"
+                    placeholder="Password..."
+                    required
+                    maxlength="250"
+                  />
+                </div>
+              </div>
+            </div>
+            <div *ngIf="error != null" class="full-width">
+              <div class="row-container validator-text">
+                <div class="left-text"></div>
+                <div class="right-text">
+                  <div>
+                    Error
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="full-width center-align">
+          <button
+            mat-raised-button
+            type="submit"
+            class="btn-w-std btn-primary uppercase-text"
+            [disabled]="
+              !loginForm.value.username.trim() || !loginForm.value.password
+            "
+          >
+            Login
+          </button>
+        </div>
+        <div class="center-align">
+          <p>
+            <a href="javascript:void(0)"
+              ><u>Sign up</u></a
+            >
+          </p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

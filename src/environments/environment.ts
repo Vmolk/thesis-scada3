@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  url: "http://localhost:5000",
+  production: false,
+  mqtt: {
+		server: 'localhost',
+		protocol: "tcp",
+		port: 1883
+	}
+
+
 };
 
 /*

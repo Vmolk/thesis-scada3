@@ -1,0 +1,237 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$svcconnectivity-fe-primary: mat-palette($mat-indigo);
+$svcconnectivity-fe-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$svcconnectivity-fe-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$svcconnectivity-fe-theme: mat-light-theme($svcconnectivity-fe-primary, $svcconnectivity-fe-accent, $svcconnectivity-fe-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($svcconnectivity-fe-theme);
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$svcconnectivity-fe-primary: mat-palette($mat-indigo);
+$svcconnectivity-fe-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+
+
+
+
+  .material-icons {
+    font-family: 'Material Icons', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  // font-family: "Calibri", sans-serif;
+  font-family: "Calibri", "Helvetica Neue", sans-serif;
+}
+
+
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.green-std {
+  color: #00893d;
+}
+
+.green-bg-std {
+  background-color: #00893d;
+}
+
+.std-m-10 {
+  margin-right: 10px !important;
+}
+
+.center-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #00893d;
+  border-color: #00893d;
+  color: #fff;
+
+}
+
+.btn-primary:hover {
+  background-color: rgba($color: #00893d, $alpha: 0.8);
+  border-color: #00893d;
+}
+
+.font-size-header {
+  font-size: 30px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.full-height {
+  height: 95%;
+}
+
+.left-align {
+  justify-content: flex-start;
+}
+
+.right-align {
+  justify-content: flex-end;
+}
+
+.default-padding {
+  padding: 25px;
+}
+
+.default-margin {
+  margin: 25px;
+}
+
+.mat-grid-tile .mat-figure {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.d-l {
+  display: flex;
+}
+
+.page-layout-container {
+  margin: 10px;
+}
+
+.flex-stretch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// .mat-card-header{
+//   height: 40px;
+// }
+.mat-drawer-inner-container {
+  overflow: hidden !important;
+}
+
+.lock-screen {
+  width: 2000px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.btn-std-w {
+  width: 196px;
+}
+
+.font-size-normal {
+  font-size: 20px;
+}
+
+.text-color {
+  color: rgb(119, 119, 119);
+}
+
+input[readonly]{
+  pointer-events: none;
+}
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.tooltip {
+  max-width: 100px;
+  padding: 0 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mat-button-focus-overlay {
+  background-color: transparent!important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.valve:hover {
+  cursor: pointer;
+}

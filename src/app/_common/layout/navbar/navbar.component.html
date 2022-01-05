@@ -1,0 +1,103 @@
+<ul class="navbar">
+  <li class="nav-left">
+    <mat-toolbar class="toolbar-header">
+      <h2 class="title">THESIS SCADA</h2>
+    </mat-toolbar>
+  </li>
+
+  <li class="nav-left" [routerLink]="['/connection']">
+    <mat-toolbar>
+      <div class="dropdown" [class.is-active]="router.isActive('/connection', false)">
+        <button mat-button class="dropbtn" >
+            <mat-icon class="font-size-icon">settings_remote</mat-icon>
+        </button>
+        <div class="dropdown-content-txt">
+          <li>
+            <a href="javascript:void(0);">Connection</a>
+          </li>
+        </div>
+      </div>
+    </mat-toolbar>
+  </li>
+
+
+  <li class="nav-left" [routerLink]="['/dashboard']">
+    <mat-toolbar>
+      <div class="dropdown" [class.is-active]="router.isActive('/dashboard', false)">
+        <button mat-button class="dropbtn" >
+            <mat-icon class="font-size-icon">home</mat-icon>
+        </button>
+        <div class="dropdown-content-txt">
+          <li>
+            <a href="javascript:void(0);">Home</a>
+          </li>
+        </div>
+      </div>
+    </mat-toolbar>
+  </li>
+
+  <li class="nav-left" [routerLink]="['/chart']">
+    <mat-toolbar>
+      <div class="dropdown" [class.is-active]="router.isActive('/chart', false)">
+        <button mat-button class="dropbtn" >
+            <mat-icon class="font-size-icon">equalizer</mat-icon>
+        </button>
+        <div class="dropdown-content-txt">
+          <li>
+            <a href="javascript:void(0);">Data visualization</a>
+          </li>
+        </div>
+      </div>
+    </mat-toolbar>
+  </li>
+
+  <li class="nav-left" [routerLink]="['/about']">
+    <mat-toolbar>
+      <div class="dropdown" [class.is-active]="router.isActive('/about', false)">
+        <button mat-button class="dropbtn" >
+            <mat-icon class="font-size-icon">info</mat-icon>
+        </button>
+        <div class="dropdown-content-txt">
+          <li>
+            <a href="javascript:void(0);">About</a>
+          </li>
+        </div>
+      </div>
+    </mat-toolbar>
+  </li>
+
+  <li class="nav-right">
+    <mat-toolbar class="toolbar-header">
+      <mat-toolbar-row>
+        <span class="example-spacer"></span>
+        <button mat-button disabled>
+          <h4 class="datetime"> {{ today }}</h4>
+        </button>
+
+         <!--button mat-button class="icon-button" (click)="logout()">
+          <mat-icon class ="font-size-icon">notifications</mat-icon>
+        </button--> 
+        <button mat-button disabled>
+          <img
+            width="70"
+            src="assets/icons/hcmute_logo.png"
+            alt="logo"
+            height="auto"
+          />
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </li>
+</ul>
+
+<mat-sidenav-container class="page-container">
+  <mat-sidenav-content>
+    <div class="page-content full-height">
+      <router-outlet ></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+

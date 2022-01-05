@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="alarm-container-out">
+    <div class="alarm-container-in">
+      <div class="alarm">
+        <div class="alarm-shape" [ngStyle]="{'background-color': highState===true? '#0bad05' : '#ebebeb'}"></div>
+        <div>High Alarm</div>
+      </div>
+      <div class="alarm">
+        <div class="alarm-shape" [ngStyle]="{'background-color': lowState===true? '#0bad05' : '#ebebeb'}"></div>
+        <div>Low Alarm</div>
+      </div>
+    </div>
+  </div>
+  <div class="tank-container">
+    <div class="tank">
+      <br>
+      <br>
+      <br>
+      <br>
+      <ngx-gauge [type]="gaugeType" [value]="tankVolume" [label]="gaugeLabel" [thick]="gaugeThick"
+        [foregroundColor]="tankColour" [cap]="gaugeCap" [min]=0 [max]=300></ngx-gauge>
+      <h1 class="text" style=" font-weight: 700"> {{tankName}}</h1>
+    </div>
+  </div>
+</div>

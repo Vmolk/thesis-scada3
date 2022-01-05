@@ -1,0 +1,77 @@
+<div class="tracking-table-container">
+  <mat-form-field color="accent" appearance="fill">
+    <mat-label style="color: black;">From:</mat-label>
+    <input matInput [matDatepicker]="picker1" style="color: black;"
+    [(ngModel)]="startDate"
+    >
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field color="accent" appearance="fill">
+    <mat-label style="color: black;">To:</mat-label>
+    <input matInput [matDatepicker]="picker2" style="color: black;"
+    [(ngModel)]="stopDate"
+    >
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2 color="primary"></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button style="background-color: rgb(46, 78, 255); color: white;" [disabled]="!startDate||!stopDate" (click)="GetData()">Get Data</button>
+  <button mat-raised-button style="background-color: rgb(255, 197, 121); margin-left: 12px; color: white;" (click)="ExportExcel()">Export Excel</button>
+  <table mat-table [dataSource]='formatDataSource()' id="TankTable">
+    <ng-container matColumnDef="#">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> # </th>
+      <td mat-cell *matCellDef="let element"> {{element.ID}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="datetime">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> Date Time </th>
+      <td mat-cell *matCellDef="let element"> {{DateTimeFormat((element.UpdateTime))}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="levelmeter">
+      <th   mat-header-cell *matHeaderCellDef class="table-header"> Level Meter </th>
+      <td mat-cell *matCellDef="let element"> {{element.LevelMeter}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="levelmeterhighalarm">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> Level High Alarm </th>
+      <td mat-cell *matCellDef="let element"> {{element.LevelMeter_HighAlarm}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="levelmeterlowalarm">
+      <th  mat-header-cell *matHeaderCellDef class="table-header"> Level Low Alarm  </th>
+      <td mat-cell *matCellDef="let element"> {{element.LevelMeter_LowAlarm}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="flowmeter">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> Flow Meter </th>
+      <td mat-cell *matCellDef="let element"> {{element.FlowMeter}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="flowmeterhighalarm">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> Flow High Alarm </th>
+      <td mat-cell *matCellDef="let element"> {{element.FlowMeter_HighAlarm}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="flowmeterlowalarm">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> Flow Low Alarm  </th>
+      <td mat-cell *matCellDef="let element"> {{element.FlowMeter_LowAlarm}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="fillvalve">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> Fill Valve </th>
+      <td mat-cell *matCellDef="let element"> {{element.FillValve}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dischargevalve">
+      <th mat-header-cell *matHeaderCellDef class="table-header"> Discharge Valve </th>
+      <td mat-cell *matCellDef="let element"> {{element.DischargeValve}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

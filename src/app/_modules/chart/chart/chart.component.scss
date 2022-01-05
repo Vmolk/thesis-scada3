@@ -1,0 +1,64 @@
+.header-text {
+  margin: 0 30px;
+}
+.mat-card {
+  color: rgba($color: #000000, $alpha: 0.5);
+}
+.card-header-container {
+  border-bottom: 1px solid gainsboro;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+
+
+
+.data-card {
+  min-width: 300px;
+  min-height: 100px;
+  background-color: rgb(244, 255, 255);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.data-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content:space-between
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content:space-between;
+  max-height: 1100px;
+}
+
+.chart-card {
+  min-width: 920px;
+  min-height: 500px;
+  max-height: 500px;
+  margin-bottom: 10px;
+  border: black 2px solid;
+}
+
+.data-table-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-bottom: 50px;
+}
+
+.table-card {
+  min-width: 1890px;
+  min-height: 600px;
+  border: black 2px solid;
+}

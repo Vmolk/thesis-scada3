@@ -1,0 +1,118 @@
+<div class="page-layout-container">
+  <mat-card>
+    <mat-card-header class="card-header-container center-align header-text">
+      <mat-card-title>
+        <strong class="font-size-header uppercase-text">
+          Data Visualization
+        </strong>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="container">
+      <div class="data-card-container">
+
+        <mat-card class="data-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Setpoint</mat-card-title>
+            <mat-card-subtitle>(cm)</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h1 style="text-align: center;">{{Setpoint}} (cm)</h1>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="data-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Level Meter</mat-card-title>
+            <mat-card-subtitle>(cm)</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h1 style="text-align: center;">{{this.signalrService.LevelMeter}} (cm)</h1>
+          </mat-card-content>
+        </mat-card>
+
+
+
+        <mat-card class="data-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Flow Meter</mat-card-title>
+            <mat-card-subtitle>(l/min)</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h1 style="text-align: center;">{{this.signalrService.FlowMeter}} (l/min)</h1>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="data-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Fill Valve</mat-card-title>
+            <mat-card-subtitle>(%)</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h1 style="text-align: center;">{{this.signalrService.FillValve}} (%)</h1>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="data-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Discharge Valve</mat-card-title>
+            <mat-card-subtitle>(%)</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <h1 style="text-align: center;">{{this.signalrService.DischargeValve}} (%)</h1>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="chart-container">
+        <mat-card class="chart-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Level Meter Chart</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <app-level-chart [data]="this.signalrService.LevelMeter" [Setpoint]="Setpoint"></app-level-chart>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="chart-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Flow Meter Chart</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <app-level-chart [data]="this.signalrService.FlowMeter" [Setpoint]="Setpoint"></app-level-chart>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="chart-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Fill Valve Chart</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <app-level-chart [data]="this.signalrService.FillValve"></app-level-chart>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="chart-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>Discharge Valve Chart</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <app-level-chart [data]="this.signalrService.DischargeValve"></app-level-chart>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="data-table-container">
+        <mat-card class="table-card">
+          <mat-card-header class="card-header-container center-align header-text">
+            <mat-card-title>DATA TABLE</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <app-data-table></app-data-table>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+
