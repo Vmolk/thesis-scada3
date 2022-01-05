@@ -10,7 +10,7 @@ import { tap, mapTo } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  apiUrl = environment
+  apiUrl = environment;
   public currentUserSubject: BehaviorSubject<any>;
   private readonly JWT_TOKEN = 'JWT_TOKEN';
 
